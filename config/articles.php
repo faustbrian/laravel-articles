@@ -14,29 +14,17 @@ declare(strict_types=1);
 return [
 
     /*
-    |--------------------------------------------------------------------------
-    | Eloquent Models
-    |--------------------------------------------------------------------------
-    */
+     * The class name of the article model that holds all articles.
+     *
+     * The model must be or extend `BrianFaust\Articles\Article`.
+     */
 
-    'models' => [
+    'article_model' => \BrianFaust\Articles\Article::class,
 
-        /*
-        |--------------------------------------------------------------------------
-        | Article Model
-        |--------------------------------------------------------------------------
-        */
+    /*
+     * The class name of the author model that owns all articles.
+     */
 
-        'article' => \BrianFaust\Articles\Models\Article::class,
-
-        /*
-        |--------------------------------------------------------------------------
-        | Author Model
-        |--------------------------------------------------------------------------
-        */
-
-        'author' => \App\User::class,
-
-    ],
+    'author_model' => \App\User::class,
 
 ];

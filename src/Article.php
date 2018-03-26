@@ -11,14 +11,17 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Articles\Models;
+namespace BrianFaust\Articles;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Spatie\ModelStatus\HasStatuses;
+use Illuminate\Database\Eloquent\Relations\MorphTo;
+use Illuminate\Database\Eloquent\Relations\MorphToMany;
+use Kalnoy\Nestedset\NodeTrait;
 use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
 use Spatie\Tags\HasTags;
+use Spatie\ModelStatus\HasStatuses;
 
 class Article extends Model
 {
@@ -28,7 +31,7 @@ class Article extends Model
 
     public function author(): BelongsTo
     {
-        return $this->belongsTo(config('articles.models.author'));
+        return $this->belongsTo(config('articles.models.author_model'));
     }
 
     public function canBePublished(): bool

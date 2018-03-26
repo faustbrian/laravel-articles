@@ -7,16 +7,50 @@
 
 ## Installation
 
-Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
+You can install the package via composer:
 
-``` bash
-$ composer require faustbrian/laravel-articles
+```bash
+composer require faustbrian/laravel-articles
 ```
 
-To get started, you'll need to publish the vendor assets and migrate:
+You must publish the migration with:
 
+```bash
+php artisan vendor:publish --provider="BrianFaust\Articles\ArticlesServiceProvider" --tag="migrations"
 ```
-php artisan vendor:publish --provider="BrianFaust\Articles\ArticlesServiceProvider" && php artisan migrate
+
+Migrate the `articles` table:
+
+```bash
+php artisan migrate
+```
+
+Optionally you can publish the config-file with:
+
+```bash
+php artisan vendor:publish --provider="BrianFaust\Articles\ArticlesServiceProvider" --tag="config"
+```
+
+This is the contents of the file which will be published at `config/articles.php`
+
+```php
+return [
+
+    /*
+     * The class name of the article model that holds all articles.
+     *
+     * The model must be or extend `BrianFaust\Articles\Article`.
+     */
+    
+    'article_model' => \BrianFaust\Articles\Article::class,
+
+    /*
+     * The class name of the author model that owns all articles.
+     */
+    
+    'author_model' => \App\User::class,
+
+];
 ```
 
 ## Testing
