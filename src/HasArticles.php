@@ -13,10 +13,7 @@ declare(strict_types=1);
 
 namespace BrianFaust\Articles;
 
-use BrianFaust\Articles\Models\Article;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
-use Illuminate\Database\Eloquent\Relations\MorphToMany;
 
 trait HasArticles
 {
