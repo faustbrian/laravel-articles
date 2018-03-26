@@ -29,7 +29,6 @@ return [
 
         'article' => \BrianFaust\Articles\Models\Article::class,
 
-
         /*
         |--------------------------------------------------------------------------
         | Author Model

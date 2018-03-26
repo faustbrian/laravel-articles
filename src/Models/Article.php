@@ -15,13 +15,10 @@ namespace BrianFaust\Articles\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\MorphTo;
-use Illuminate\Database\Eloquent\Relations\MorphToMany;
-use Kalnoy\Nestedset\NodeTrait;
+use Spatie\ModelStatus\HasStatuses;
 use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
 use Spatie\Tags\HasTags;
-use Spatie\ModelStatus\HasStatuses;
 
 class Article extends Model
 {
