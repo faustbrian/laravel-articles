@@ -22,7 +22,7 @@ class CreateArticlesTables extends Migration
             $table->increments('id');
             $table->unsignedInteger('author_id')->index();
             $table->string('title');
-            $table->string('slug');
+            $table->string('slug')->index();
             $table->text('body');
             $table->timestamp('publish_at')->nullable();
             $table->timestamps();
