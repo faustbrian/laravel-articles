@@ -1,12 +1,12 @@
 {
-    "name": "faustbrian/laravel-articles",
+    "name": "artisanry/articles",
     "description": "Easy Articles for Laravel",
     "keywords": ["laravel", "framework", "articles", "eloquent", "tags", "slug"],
     "license": "MIT",
     "authors": [{
         "name": "Brian Faust",
-        "email": "hello@brianfaust.me",
-        "homepage": "https://brianfaust.me"
+        "email": "hello@basecode.sh",
+        "homepage": "https://basecode.sh"
     }],
     "require": {
         "php": "^7.1.3",
@@ -23,12 +23,12 @@
     },
     "autoload": {
         "psr-4": {
-            "BrianFaust\\Articles\\": "src/"
+            "Artisanry\\Articles\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "BrianFaust\\Tests\\Articles\\": "tests"
+            "Artisanry\\Tests\\Articles\\": "tests"
         }
     },
     "config": {
@@ -41,7 +41,7 @@
         },
         "laravel": {
             "providers": [
-                "BrianFaust\\Articles\\ArticlesServiceProvider"
+                "Artisanry\\Articles\\ArticlesServiceProvider"
             ]
         }
     },
